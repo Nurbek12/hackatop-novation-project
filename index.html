@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/icons/icon-144x144.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Electron</title>
+    <link rel="manifest" href="./manifest.json">
+    <link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials" />
+    <meta name="theme_color" content="#fff">
+    <script src="/dev-dist/registerSW.js"></script>
+    <script>
+      if('serviceWorker' in navigator) {
+         window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/dev-dist/sw.js', { scope: '/dev-dist/' })
+        })
+      }
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
