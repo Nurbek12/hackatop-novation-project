@@ -17,7 +17,7 @@
     </div>
     <div class="mt-4 px-4 py-4">
         <p class="nunito-semi-bold text-lg">Electricity consumption for each month</p>
-        <div class="full scrollbar-hide h-[260px]">
+        <div class="full scrollbar-hide overflow-x-auto h-[260px]">
             <div class="h-full flex items-end gap-4 px-4">
                 <div v-for="d,i in 12" :key="i" class="group relative flex flex-col items-center justify-end h-[200px]">
                     <div class="rounded-xl flex text-white px-4 py-2 absolute text-nowrap transition-all opacity-0 group-hover:opacity-100 top-[-20px] group-hover:top-[-50px]" :class="{
@@ -32,18 +32,9 @@
                 </div>
             </div>
         </div>
-        <div hidden class="bg-[#1BE08E]"></div>
-        <div hidden class="bg-[#FF7A01]"></div>
-        <div hidden class="bg-[#FF0101]"></div>
     </div>
 </template>
 
 <script setup lang="ts">
 const data = new Array(12).fill(0).map(() => Math.floor(Math.random() * 90) + 10)
 </script>
-
-<style>
-.scrollbar-hide::-webkit-scrollbar {
-    display: none;
-}
-</style>

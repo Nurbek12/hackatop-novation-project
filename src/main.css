@@ -8,6 +8,10 @@
     --primary: #4A76FD;
 }
 
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
 .nunito-thin {
     font-family: "Nunito", sans-serif;
     font-weight: 100;
