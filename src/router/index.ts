@@ -1,7 +1,7 @@
-import { useAppStore } from '../store'
+// import { useAppStore } from '../store'
 import { createRouter, createWebHistory } from 'vue-router'
 
-const beforeEnter = (to: any, from: any, next: any) => {
+const beforeEnter = (_: any, __: any, next: any) => {
     // const store = useAppStore()
     // if(!store.isLogged) next('/auth')
     // else next()
