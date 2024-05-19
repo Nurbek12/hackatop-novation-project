@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <router-link :to="`/devices/${id}`">
         <div class="w-full h-[200px] shadow rounded-2xl overflow-hidden">
             <img :src="room_types.find(t => t.title == props.type)?.img" class="w-full h-full object-cover">
         </div>
@@ -13,7 +13,7 @@
             </div>
             <span class="nunito-regular"><b>{{ props.devices }}</b> devices</span>
         </div>
-    </div>
+    </router-link>
 </template>
 
 <script setup lang="ts">
@@ -21,6 +21,7 @@ import { defineProps } from 'vue'
 import { room_types } from '../constants'
 
 const props = defineProps<{
+    id?: number,
     title?: string,
     type?: string,
     devices?: number

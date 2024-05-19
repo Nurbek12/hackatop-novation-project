@@ -12,8 +12,8 @@ export const useAppStore = defineStore('app', {
         isLogged: state => !!state.token,
         get_token: state => state.token,
         get_user: state => state.user,
-        rooms: state => state.rooms, 
-        devices: state => state.devices, 
+        get_rooms: state => state.rooms, 
+        get_devices: state => state.devices, 
     },
     actions: {
         set_token(token: string | null) {
@@ -35,7 +35,13 @@ export const useAppStore = defineStore('app', {
         log_out() {
             this.set_token(null)
             this.set_user(null)
-            window.location.href = '/auth/login'
+            // window.location.href = '/auth/login'
+        },
+        set_rooms(rooms: any) {
+            this.$patch({ rooms })
+        },
+        set_devices(devices: any) {
+            this.$patch({ devices })
         },
     }
 })

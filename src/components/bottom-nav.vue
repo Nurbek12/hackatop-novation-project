@@ -14,12 +14,12 @@
 
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
-import { McOpenDoorFill, BxSolidDashboard, AkDevices } from '@kalimahapps/vue-icons'
+import { McOpenDoorFill, BxSolidDashboard, MdRoundCalculate } from '@kalimahapps/vue-icons'
 
 const route = useRoute()
 const links = [
     { title: 'Dashboard', url: '/', icon: BxSolidDashboard },
     { title: 'Rooms', url: '/rooms', icon: McOpenDoorFill },
-    { title: 'Devices', url: '/devices', icon: AkDevices },
+    { title: 'Calculator', url: '/calculator', icon: MdRoundCalculate },
 ]
 </script>
