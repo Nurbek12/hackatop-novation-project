@@ -5,7 +5,7 @@
                 <span v-for="i in 15" class="text-nowrap text-blue-500 cursor-pointer">Link {{ i }}</span>
             </div>
         </div>
-        <div class="mt-6 grid grid-cols-2 gap-4">
+        <div class="mt-6 grid grid-cols-2 gap-4 max-h-[60vh] overflow-auto scrollbar-hide">
             <device v-for="dv,i in dvs"
                 :key="i"
                 :icon="dv.icon"
@@ -24,6 +24,10 @@ const dvs = [
     { title: 'Light bubls', description: 'Philips Hue 2', icon: MiLightbulbShine, switch: true },
     { title: 'Smart TV', description: 'Panasonic', icon: TaDeviceTv, switch: false },
     { title: 'Wi-Fi Router', description: 'TP Link', icon: UnWifiRouter, switch: false },
+    { title: 'Heater', description: 'Ariston', icon: LuHeater, switch: false },
+    { title: 'Heater', description: 'Ariston', icon: LuHeater, switch: false },
+    { title: 'Heater', description: 'Ariston', icon: LuHeater, switch: false },
+    { title: 'Heater', description: 'Ariston', icon: LuHeater, switch: false },
     { title: 'Heater', description: 'Ariston', icon: LuHeater, switch: false },
 ]
 </script>

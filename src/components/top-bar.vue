@@ -1,10 +1,10 @@
 <template>
     <div class="rounded-b-3xl border-b-4 px-6 pb-4">
-        <span class="nunito-regular text-blue-500 text-sm">{{ new Date().toDateString() }}</span>
+        <span class="nunito-regular text-blue-500 text-xs">{{ new Date().toDateString() }}</span>
         <div class="mb-2 flex items-center justify-between">
             <div>
-                <h1 class="nunito-extra-bold text-2xl">Jasurbek Tursunov</h1>
-                <span class="text-lg">Samarqand, Obi-Rahmat 5A</span>
+                <h1 class="nunito-extra-bold text-xl">Jasurbek Tursunov</h1>
+                <span>Samarqand, Samarqand 12 str.</span>
             </div>
             <div class="w-[60px] h-[60px] rounded-full overflow-hidden p-0.5 border border-blue-500">
                 <img src="/images/jasur.png" alt="" class="rounded-full w-full h-full object-cover">
