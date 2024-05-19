@@ -20,7 +20,7 @@ api.interceptors.response.use(
 
 export const checkToken = () => {
     const token = store.token||''
-    api.defaults.headers.common.Authorization = `Bearer ${token}`
+    if(token) api.defaults.headers.common.Authorization = `Bearer ${token}`
 }
 
 checkToken()
